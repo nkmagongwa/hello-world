@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title></title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+   <script>
+      // create a map object
+      let employees = new Map(); // create an empty map 
+      // add elements to the map
+      employees.set("melary", 21).set("Ricardo", 3);
+      employees.set("John", 34);
+      console.log(employees);
+
+      // retrieve elememnts 
+      console.log(employees.get("melary")); // 21
+      console.log(employees.get("shammah")); // undefined 
+      // checking for existance 
+      console.log(employees.has("melary")); // true
+      console.log(employees.has("banana"));
+
+      // delete 
+      console.log(employees.delete("melary")); // 
+      console.log(employees); //
+
+      // clear 
+      //employees.clear();
+      //console.log(employees);
+
+      // size 
+      /*
+      console.log(employees.size);
+
+      console.log(employees.keys());
+      console.log(employees.values());
+      console.log(employees.entries());
+      // print the ages of the employees 
+      for( let employee of employees.values() ) { 
+          console.log(employee); //
+      }
+
+      // print the employee and their salaries 
+      for(let [employee,Salary] of employees.entries()) {
+          console.log(employee, "R"+Salary); //
+      }
+
+      |*/
+
+
+      //create a map to store marks for 3 subjects 
+      //subjets => maths,database,programming
+      // store marks for 3 students maximum mark is 100 minimun 1
+      //a. calculating the total markd for each learner  e.g Melary total marks is 150
+      // b. calculate the average marks for each learner 
+      //c. display the names of the learners that have an average of above 50
+
+      // a print the students and their marks 
+      for (let [name, mark] of marksheet.entries()) {
+         console.log(name, mark[0], mark[1], mark[2]);
+      }
+      // b. calculate the total  marks for learner 
+      for (let [name, mark] of marksheet.entries()) {
+         console.log(name, mark.reduce((sum, element) => sum + element));
+      }
+      // c. calculate the average of the marks 
+
+
+      for (let [name, mark] of marksheet.entries()) {
+         console.log(name, mark.reduce((sum, element) => sum + element) / mark.length);
+      }
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title></title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+   <script>
+      // 1.
+      //let collection = ["Melary",23,true,["chicken", "salad"],NaN]; // poplular
+      //console.log(collection);
+
+      // 2. 
+      /*let cars = new Array("toyota","benz", "bmw", "kia"); //
+      console.log(cars); // print everything 
+      console.log(cars[1]) // print benz
+      // replace elements inside an array 
+      cars[2] = "havaal"; // replace bmw
+      console.log(cars);
+      cars[4] = "bmw";  // adding new elements to the array
+      console.log(cars);
+      console.log(cars.length); // prints size of the array  4
+      // deleting elements 
+      delete cars[1]; // delete benz
+      console.log(cars);
+
+      // iterating through the contenets of the array using the for loop- 
+      for(let i = 0; i < cars.length; i++){
+          console.log(cars[i]);
+      }
+      */
+      // write a program that converts string to uppercase 
+      //and then if its a number it must be doubled 
+      // melary, 34,67,chhicken ,tea,53 
+
+      // solution 1
+      /*let question = ["melary",34,67,"chicken",true,"tea",53]; 
+
+              for (let i = 0; i < question.length; i++) { 
+                  if (isNaN(question[i])){
+                      question[i] = question[i].toUpperCase();
+                  }
+                  else{
+                      question[i] *= 2;
+                  }
+              }
+
+              console.log(question);
+      */
+
+      // 10 minutes to do the question
+
+
+      // solution 2 
+      /*let myarray=["melary",34,67,"chhicken","tea",53];
+              for(let i=0;i<myarray.length;i++)
+              {
+                  if(typeof myarray[i]==="string")
+                  {
+                      myarray[i]=myarray[i].toUpperCase();
+                  }
+                  else if(typeof myarray[i]==="number")
+                  {
+                      myarray[i]*=2;
+                  }
+                  console.log(myarray[i]);
+              }
+      */
+
+      // multi dimension arrays 
+
+      /*let multi = [
+          ["melary",21,"sushi"],
+          ["Ashle",14,"chhicken"],
+          ["Ruan", 56,"salad"]
+       ]
+
+       // print the favorite food for ashle 
+       console.log(multi[1][2]);
+
+       // iterate through the details of Ruan and print 
+
+       for(let i=0;i<multi[2].length;i++)
+              {
+                  console.log(multi[2][i]);
+              }
+      */
+
+      /*
+      // ARRAY METHODS 
+      let fruits = ["banana", "apples","kiwi","orange"]
+      //1. adding elements to the array 
+      // a. push >> appends at the end of the array
+      fruits.push("pineapples", "watermelon");
+      console.log(fruits);
+
+      //b. unshift >> adds elements to the beginning of the array
+      fruits.unshift("one","two");
+      console.log(fruits);
+
+      //2. DELETING ELEMENTS FROM AN ARRAY 
+      //a. pop >> removes elements from the end of the array and retutns it 
+      console.log(fruits.pop()); // delete watermelon and return it as a value 
+      console.log(fruits); // prints the new array 
+      // b. shift 
+      fruits.shift(); // removes elements from the beginning of the array
+      console.log(fruits);
+
+      // slice >> returns a portin of the array 
+      //console.log(fruits.slice(2,5)); // 
+
+      // splice 
+      fruits.splice(3,0,"add1", "add2", "add3",[1,2,3]);
+      console.log(fruits);
+      fruits.splice(3);
+      console.log(fruits);
+
+      */
+
+      //joining arrays 
+      let number = [1, 2, 3, 4, 5];
+      let letters = ["a", "b", "c", "d"];
+      //console.log(number.concat(letters));
+
+      let arrConcat = number.concat(letters);
+      console.log(arrConcat);
+
+      // ascending, descending order 
+      // sort numbers // sort strings 
+
+      let group1 = [11, 87, 56, 4, 54, 98, 61];
+      // write a function to sort the numbers in  ascending and descending order
+
+      function ascendingOrder(group1) {
+         console.log(group1.sort(function (a, b) {
+            return a - b
+         }));
+      }
+
+      function descendingOrder(group1) {
+         console.log(group1.sort(function (a, b) {
+            return b - a
+         }));
+      }
+
+      console.log(ascendingOrder(group1)); // ascending order
+      console.log(descendingOrder(group1)); // descending order
+
+
+
+      //let group2 = ["cat", "mouse", "fish","dog"];
+
+      // write a program to sort the pets in ascending order 
+      //console.log(group2.sort());
+      // write a program to sort the pets in descending order
+      //console.log(group2.reverse());
+
+      // QUESTION 1 
+      //let age = [2,67,26,18,23,12,5];
+      // display the ages which are to vote 
+      /*
+      for(i=0;i<=age.length;i++){
+
+          if(age[i]>=18){
+              console.log(age[i])
+          }
+          else{
+              continue
+          }
+      }
+      */
+
+      // filter method 
+
+      //QUESTION 2
+      // a. Take the input from the user to populate your array of ages ( 5 elements )
+      //b. print the ages that are legal to vote   >> create a new array 
+      //c.  count the total of the people who can vote  >> .length method
+      //.d calculate the total of the ages from the orignal array in (question a) >> reduce
+
+
+      let ages2 = new Array();
+      let count = 0;
+      let sum = 0;
+      for (let i = 0; i < 5; i++) {
+         let input = 1 * prompt("Enter an age");
+         ages2.unshift(input);
+      }
+
+      for (let i = 0; i < ages2.length; i++) {
+         if (ages2[i] >= 18) {
+            console.log(ages2[i]); // b
+            count++;
+         }
+         sum += ages2[i];
+      }
+      // c
+      console.log(count + " people who can vote");
+      //d 
+      console.log("Total of all ages : " + sum);
+
+      //QUESTION 3 
+      let marks = [34, 67, 87, 54, [82, 15, 70]];
+      //a. add 44 and 56 after the marh 87
+      //b. remove 70 from the array
+      //c. extract the multi dimension array and iterate through its values that it has [82,15,70]
+      //d. the marks in question d were incorrectly captured, add 5 marks to everyone 
+      //e. passmark is 50 .. return the passed marks ( use the orignal array that i provided )
+      //f. how many students failed the test 
+      //g. calculate the total of all marks ?(use the orignal array that i provided )
+      //h. calculate the avaerage of the marks (use the orignal array that i provided).
+   </script>
+</body>
+
+</html>

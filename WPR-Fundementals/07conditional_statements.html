@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title></title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+   <script>
+      // if 
+      // if(condition to test){
+      // block of code to be executed when the condition is true
+      //}
+
+
+      // write a program to determine if a student can vote 
+      // voting age 18
+
+      //let age = 1*prompt("how old are you?");
+      //if(age >= 18){
+      //console.log("congrats, you can vote");
+      //}
+      // else 
+      //block of code to be executed when the condition is false
+      //else{
+      // console.log("regret, you cannot vote");
+      //}
+
+      //3. else if 
+
+      // write a code where you greet vistors that visit your campus and then you direct them
+      // to their allocated venues 
+      // lecturers = cafeteria 
+      // parents = church
+      //anyone else you turn them away. 
+
+      //let visitor = prompt("who are you?");
+      //if(visitor == "lecturer"){
+      // console.log("welcome, you can go to the cafeteria");
+      //}
+      //else if (visitor == "parent"){
+      //console.log("welcome, you can go to the church");
+      //}
+      //else{
+      //  console.log("we are sorry, you can go back home");
+      //}
+
+      //question 1 
+      //let say the government want to issue grants to students who are ophans.
+      //write a progran to check whether particular student qualifies. 
+
+      //let student= prompt("Are you an orphan");
+      //  if(student.toLowerCase()=="yes")
+      // {
+      // console.log("gets a grant");
+      // }
+      // else
+      // {
+      //     console.log("does not get a grant");
+      // }
+
+      /*let mother = confirm("Is  your mother alive ?");
+       let father = confirm("Is your father alive");
+
+       if(mother == false && father == false){
+        console.log("congrats you get a grant");
+       }
+       else{
+        console.log("opps, you dont ualify for our R350 grant");
+       }
+*/
+
+      // question 2 
+      // Ricardo and Ashle are trying to compare their body mass index(BMI)
+      // BMI formula = mass/height^2---- mass is in kg and height in metres
+      //get the input from the user 
+      //1. store Ricaldo's and Ashle's mass and height as varibles 
+      //2. calculate both of their BMI
+      //3. compare their BMI and print out who is heavier based on the statistics. 
+
+      // let RicardoMass= 1*prompt("Mass of Ricardo in kg");
+      // let RicardoHeight=1* prompt("Height of Ricardo in metres");
+
+      // let AshleMass=1* prompt("Mass of Ashle in kg");
+      // let AshleHeight=1* prompt("Height of Ashle in metres");
+
+      //         function BMI(mass,height)
+      //         {
+      //             return((mass)/(height*height));
+      //         }
+
+      //         let AshleBMI=BMI(AshleMass,AshleHeight);
+      //         let RicardoBMI=BMI(RicardoMass,RicardoHeight);
+
+      //         if(AshleBMI>RicardoBMI)
+      //         {
+      //             alert("Ashle is heavier. Her BMI is: "+Math.round(AshleBMI));
+      //         }
+      //         else
+      //         {
+      //             alert("Ricardo is heavier. His BMI is: "+Math.round(RicardoBMI));
+      //         }
+
+      let AshleWeight = 1 * prompt("What is your weight Ashle?");
+      let AshleHeight = 1 * prompt("What is your height Ashle?");
+      let RicardoWeight = 1 * prompt("What is your weight Richardo?")
+      let RicardoHeight = 1 * prompt("What is your height Richardo?");
+
+      let AshleBMI = (AshleWeight / AshleHeight) * (AshleWeight / AshleHeight);
+      let RicardoBMI = (RicardoWeight / RicardoHeight) * (RicardoWeight / RicardoHeight);
+
+
+      if (AshleBMI > RicardoBMI) {
+         console.log("Ashle is more overweight compared to Ricardo");
+      } else if (AshleBMI < RicardoBMI) {
+         console.log("Ricardo is more overweight compared to Ashle");
+      } else {
+         console.log("Please try again, your input was incorrect...");
+      }
+   </script>
+</body>
+
+</html>

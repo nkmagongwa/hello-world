@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title></title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+   <script>
+      /*
+        //object literal synthax
+        let student = {
+            name:"Shammah",
+            surname:"blue",
+            age:21,
+            marks: [90,45,86],
+            "like birds":"yes"
+        }
+
+        console.log(student);
+
+        // accesing property values of an object 
+        console.log(student.name);// dot notation >> shammah
+        console.log(student.marks[1]); // print 45
+        console.log(student["like birds"]); // square bracket notation for multi words
+        console.log(student.salary); // if a property does not exist you get undefined 
+
+        // adding a property 
+         student["gender"]= "male";
+         console.log(student);
+
+         // delete property 
+         delete student["like birds"];
+         console.log(student);
+
+*/
+      // 2. object constructor method 
+      function Employee(name, surname, age, title, salary) {
+         this.name = name;
+         this.surname = surname;
+         this.age = age;
+         this.title = title;
+         this.salary = salary;
+      }
+
+      let emp1 = new Employee("sam", "grey", 21, "Chef", 10000);
+      let emp2 = new Employee("Sun", "jam", 45, "IT", 50000);
+      let emp3 = new Employee("melary", "kurll", 84, "cleaner", 5000)
+
+      console.log(emp2);
+
+
+
+      // use an array as a data structure to contain the employee details 
+
+      /*
+      // remeber you need the constructor function
+      let employeeRecord = [];
+      for(let i = 0; i < 3; i++){
+          let name = prompt("enter the first name");
+          let surname = prompt("please enter the surname");
+          let age= 1*prompt("please enter age");
+          let title =prompt("please enter your job title");
+          let salary = 1* prompt("please enter salary");
+          employeeRecord.push(new Employee(name,surname,age,title,salary));
+      }
+      console.log(employeeRecord);
+      */
+
+      let employeeDta = [{
+            name: "adrian",
+            surname: "pink",
+            age: 9,
+            salary: 350
+         },
+         {
+            name: "Luke",
+            surname: "purpke",
+            age: 9,
+            salary: 1350
+         }
+
+      ]
+
+      console.log(employeeDta);
+
+
+      // create a constructor function to enter car details to the database 
+      // name model year repairfees 
+      // bmw  c180 2021  8000
+      // enter 5 objects 
+      // a. print only the name of the cars and the model
+      //b. print the details of the cars that costs above 5000 to repair 
+      //c. calculate the avarage repairfees for the garage.
+
+      //Constructor for car object.
+      /*  function Car(name, model,year,repairfees)
+           {
+               this.name = name;
+               this.model = model;
+               this.year = year;
+               this.repairfees = repairfees;
+           }
+
+           // Populate cars array.
+           let cars = [];
+           for(let i=0; i < 2;i++)
+           {
+               let name = prompt("Enter name");
+               let model = prompt("Enter model");
+               let year = prompt("Enter year");
+               let repairfees = 1*prompt("Enter repairfees");
+
+               cars.unshift(new Car(name, model,year,repairfees));
+           }
+
+
+           // a. Print the name and model of the car.
+           for(const car of cars)
+           {
+               console.log(car.name + " " + car.model);
+           }
+
+           // print the details of the cars that costs above 5000 to repair.
+           for(const car of cars)
+           {
+               if(car.repairfees > 5000)
+               {
+                   console.log(car);
+               }
+           }
+
+           //c calculate the average reparifees for the garage
+           let avg = 0;
+           let sum = 0;
+          // let cars = [] 
+
+           for(let i = 0; i < cars.length; i++)
+           {
+               let amtOfCars = cars.length;
+               sum += cars[i].repairfees;
+               avg = sum/amtOfCars;
+
+           }
+         */
+
+      // hard coded values 
+      /*
+            function Car(make, model, price, year, repair)
+      {
+          this.Make = make;
+          this.Model = model;
+          this.Price = price;
+          this.Year = year;
+          this.Repair = repair;
+      }
+
+      let RepairAVG =0;
+      let RepairSum =0;
+      let Car1 = new Car("BMW","X6",980000,2019,25000);
+      let Car2 = new Car("Mercedes-Benz","C180",25000,2008,12500);
+      let Car3 = new Car("Toyota","Hilux",450000,2019,6500);
+      let Car4 = new Car("Mazda","3",250000,2016,8500);
+      let Car5 = new Car("Fiat","Uno",15000,1998,3500);
+
+      let ArrCar =[Car1,Car2,Car3,Car4,Car5];
+
+      //a
+      for(i=0;i<ArrCar.length;i++)
+      {
+          currCar=ArrCar[i];
+          console.log("Car Make: "+currCar.Make+" Car Model: " + currCar.Model);
+      }
+      //b
+      for(i=0;i<ArrCar.length;i++)
+      {
+          currCar=ArrCar[i];
+          if(currCar.Repair>5000)
+          {
+            console.log(JSON.stringify(currCar));  
+          }
+          
+      }
+      //c.
+      for(i=0;i<ArrCar.length;i++)
+      {
+          currCar=ArrCar[i];
+          RepairSum+=currCar.Repair;
+      }
+      RepairAVG=(RepairSum/(ArrCar.length-1));
+      console.log("Avergare Repair cost for the garage: " + RepairAVG);
+      */
+
+
+      // another solution 
+      //Constructor for car objects
+      function CarDetails(name, model, year, repairFees) {
+         this.name = name;
+         this.model = model;
+         this.year = year;
+         this.repairFees = repairFees;
+      }
+
+      let Cars = new Array(); //Storing all cars in
+      
+      //   for (var i = 0; i < 5; i++) {
+      //     let CarName = prompt("Please Enter the car name");
+      //     let CarModel = prompt("Please enter the car model");
+      //     let CarYear = prompt("Please enter the car year");
+      //     let CarRepairFees = prompt("Please enter the car model fees");
+      //     //Generating a constructor of the car
+      //     let Car = new CarDetails(CarName, CarModel, CarYear, CarRepairFees);
+      //     Cars.push(Car);//Adding all cars to the array
+      //   }
+      //Hardcoded values
+      let car1 = new CarDetails("bmw", "c1800", "2021", "8000");
+      let car2 = new CarDetails("Toyota", "Corolla Hatchback", "2022", "10000");
+      let car3 = new CarDetails("Lincoln", "Corsair", "2021", "2000");
+      let car4 = new CarDetails("Chevrolet", "Corvette", "2021", "1000");
+      let car5 = new CarDetails("Toyota", "Corolla Hybrid", "2022", "80000");
+    
+      Cars.push(car1);
+      Cars.push(car2);
+      Cars.push(car3);
+      Cars.push(car4);
+      Cars.push(car5);
+
+      //A. printing car name and model
+      Cars.forEach((car) => {
+         console.log(car.name + " " + car.model);
+      });
+      //B. Printing cars that meet a fee greater than 5000
+      Cars.forEach((car) => {
+         if (car.repairFees > 5000) {
+            console.log(
+               car.name + " " + car.model + " " + car.year + " " + car.repairFees
+            );
+         }
+      });
+      //C. Calculating the the avareage repar fees for garadge
+      let Fees = new Array(); //Array containing fees
+      Cars.forEach((car) => {
+         let fees = parseInt(car.repairFees); //Converting all fees to integers
+         Fees.push(fees); //Adding all fees to Fees array
+      });
+      let numberOfFees = Fees.length; //Number of fees
+      let TotalFees = Fees.reduce((a, b) => a + b, 0); //Adding all/Summing array
+      let averageFees = TotalFees / numberOfFees; //Calculating average
+      console.log("The garadge average fee is R" + averageFees);
+   </script>
+</body>
+
+</html>

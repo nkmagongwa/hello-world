@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title></title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+   <script>
+      let today = new Date(); // prints today date 
+      console.log(today);
+      let christmas = new Date(2022, 11, 25); // months start at zero 
+      console.log(christmas);
+
+      // printing parts of the date 
+
+      console.log(christmas.getFullYear()); // prints the year 
+      console.log(christmas.getTime()); // converts time to milliseconds 
+      console.log(christmas.getHours());
+      console.log(today.getHours());
+      //minutes 
+      //secongs 
+      //month
+      //date 
+
+
+      //write a function that calculates the difference between 2 dates
+      // todays date and freedom day 2023
+      //a.number of days 
+      //b. how many months are left (round your answer to the nearest interger. )
+
+      let date_1 = new Date('2023-04-27'); // print 
+      let date_2 = new Date();
+      console.log(date_1);
+
+      // Days
+      const days = (date_1, date_2) => {
+         let difference = date_1.getTime() - date_2.getTime();
+         let TotalDays = Math.floor(difference / (1000 * 60 * 60 * 24));
+         return TotalDays;
+      }
+
+      // Month
+      function monthDiff(date_2, date_1) {
+         return date_1.getMonth() - date_2.getMonth() + (12 * (date_1.getFullYear() - date_2.getFullYear()))
+      }
+
+      console.log(days(date_1, date_2) + " days to freedom day");
+      console.log(monthDiff(date_2, date_1) + " months to freedom day");
+   </script>
+</body>
+
+</html>

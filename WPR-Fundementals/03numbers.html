@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title></title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+   <script>
+      /*
+let x = 7; // interger 
+let y = 7.34 // floating number 
+let billion = 1000000000; //
+let billionshorten = 1e9; //
+let a = 0.00000000001;
+let shorten = 1e-8; //
+*/
+
+      let num = 10;
+      let num2 = num.toString(); // string 
+      console.log(typeof num2);
+      console.log(num2)
+
+      let a = 4.7;
+      let b = 4.2;
+      console.log(Math.floor(a)); // 4
+      console.log(Math.floor(b)); // 4
+
+      console.log(Math.ceil(a)); //5
+      console.log(Math.ceil(b)); //5
+
+      console.log(Math.round(a)); // 5
+      console.log(Math.round(b)); // 4
+
+      // to fixed 
+      console.log((1 / 3).toFixed(1)); // one decimal places 
+      console.log((1 / 3).toFixed(2)); // two decimal places 
+
+
+      // write a program that generates 5 random numbers between  1-00 
+      function random(min, max) {
+         return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      for (var i = 0; i < 5; i++) {
+         console.log(Math.round(random(1, 100)));
+      }
+   </script>
+</body>
+
+</html>

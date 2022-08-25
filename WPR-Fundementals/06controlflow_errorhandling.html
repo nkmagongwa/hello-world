@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+    </head>
+    <body>
+    <script>
+
+
+
+/*
+let int1 = 1*prompt("Please enter your first number");
+
+let int2 = 1*prompt("Please enter second number");
+
+let multi = 1*prompt("Please enter choose one of the following operators by entering a number \n1. Multiplication. \n2. Division \n3. Add \n4. Subtract");
+
+switch(multi) {
+
+case 1: alert(int1 * int2);// multiplication
+ break; 
+case 2: alert(int1 / int2);//division
+break;
+
+case 3: alert(int1 + int2); 
+break;
+
+case 4: alert(int1 - int2);
+break;
+default: alert("Invalid operator"); 
+
+}
+*/
+
+//you run an online shop of selling fruits 
+// prices of fruits 
+//banana =R10
+//apples = R15
+//oranges = R20
+//pineapple = R5
+// if a user inqures about a fruits, you should notify them the price 
+//otherwise if its outof stock you should notify them 
+/*
+let fruit = prompt("please enter the fruit that you want to buy ?");
+fruit = fruit.toLowerCase();
+
+switch(fruit){
+    case"banana":
+    console.log("the price of banana is R10");
+    break;
+
+    case "apples": 
+    console.log("the price of apples is R15");
+    break;
+
+    case"oranges": 
+    console.log("the price of oranges is R20");
+    break;
+
+    case"pineapple": 
+    console.log("the price of pineapple is R5");
+    break;
+
+    default: 
+    console.log("oopd the fruit is out of stock");
+}
+*/
+//synthax error 
+//consooole.log("my name melary");
+
+//runtime error
+//let a = 5;
+//console.log(a + b);
+// logic error
+
+//error handling 
+//try{
+
+    // write all the codes that we want to test for errors
+//}
+
+//catch(){
+ // execution error handling
+//}
+
+//Write a code which ask a user to enter in their phone number. If the user enters a value 	
+//which is not a
+ //number your program must be able to detect the error and display the error 	to the user. 
+
+try{
+
+let number = 1*prompt("Please enter your phone number already assuming +27 is entered");
+
+if (number=="") throw "Empty";
+
+if(isNaN(number)) throw "Please enter a valid phone number";
+
+alert("Phone number = +27"+number.toString());
+
+console.log("Phone number = +27"+number.toString());
+
+}
+
+catch(e){
+
+console.log("Error: " + e);
+
+alert("Error: " + e);
+
+}
+
+
+
+
+
+
+
+    </script>
+    </body>
+</html>

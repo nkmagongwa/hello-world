@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+    <script>
+let single = 'melary'; 
+let double ="malary";
+let backtick =`Mulary`;
+
+// Write a function to check if a given number is a valid phone number 
+// a valid number should start with a 0 and  length is 10 
+/*
+let num = prompt("Please enter your phone number.");
+        let phoneNumber = num.toString();
+        let firstNum = phoneNumber.charAt(0);
+
+        if (firstNum == '0') 
+        {
+            if (phoneNumber.length == 10)
+            {
+                alert("Your cellphone number is valid");
+            }
+
+            else
+            {
+                alert("The phone number provided does not have enough numbers");
+            }
+        }
+
+        else
+        {
+            alert("The phone number provided does not begin with a '0' ");
+        }
+
+*/
+function validatePhoneNumber(number) {
+            try{
+                if(isNaN(number)) {
+                    throw "invalid number"
+                }
+                if ((number.length == 10) && (number.charAt(0) == '0')) {
+                return "valid";
+            }
+            else {return "invalid";}
+            }
+            catch (e) {return e;}
+            
+        }
+
+        console.log("The phone number is " + validatePhoneNumber(prompt("Please enter a valid phone number...")));
+
+
+
+
+
+
+
+
+    </script>
+    </body>
+</html>

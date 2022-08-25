@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <script>
+        // while loop
+        // starting point, ending point,counter,coditions, statements 
+        // print numbers 1 to 10 
+        // dummy version 
+        /*console.log(1);
+        console.log(2);
+        console.log(3);
+        console.log(4);
+        console.log(5);
+        console.log(6);
+        */
+        /*
+        let counter = 1;// initial counter
+        while(counter <= 10){ // condition .. end 
+            console.log(counter);//action to be executed as long as the contion is true 
+            counter++; // update counter
+        }
+        */
+
+        //
+
+        //print numbers 10 to 1 using the while statement. 
+
+        /*let counter=10;
+                while(counter>=1)
+                {
+                    console.log(counter);
+                    counter--;
+                }
+                */
+        //write a code that prints even numbers between 10 and 50 inclusive.
+        //let numbers = 10;
+        //while(numbers <= 50){
+        // if(numbers % 2 == 0){ 
+        // console.log(numbers)
+        //}
+        // numbers++
+        //} 
+
+        //let counter = 10; 
+        //while(counter <=50){
+        // console.log(counter);
+        //counter +=2;
+        //}
+
+        // 2. do while 
+        // print the numbers 1 to 10 
+
+        //let counter = 1;
+        //do {
+        // console.log(counter);
+        // counter ++;
+        //}
+        //while(counter <= 10);
+
+        // 3. for loop
+        // print the numbers 1 to 10
+
+        //for(let i = 1; i <=10; i++){
+        //console.log(i);
+        //}
+
+        // using for loop print multples of 4 from 10 to 100 exclusive. 
+        //for (let x = 12; x <=99; x +=4 ){
+        //console.log(x);
+        //}
+
+        // question 1 
+        // ask a user to enter a secret number. then write a codes that 
+        //performs a summation of the numbers in between 
+        //e.g if a user enters 5 the output must be 15 >>  1+2+3+4+5 
+
+        /*let secret=1*prompt("Enter a number");
+                let sum=0;
+                for(let i=1;i<=secret;i++)
+                {
+                    sum+=i;
+                }
+                alert("The sum is: "+sum);
+                console.log(sum);
+        */
+
+        // question 2 
+        // you are tasked write a code that allows a capitec user to enter their pin code
+        // to withdraw money from an ATM 
+        //the customer is only allowed to have three attempts to withdraw
+        // otherwise the account will be blocked
+        // each time a user punches a wrong password give them a warning how many tries are remaining 
+        // lets assume the correct pin is 1234.
+
+        /*let pin = 1*prompt("Please enter your pin")
+
+        let maxAttempt = 3
+
+        if(pin==2000){
+
+            alert("Congrats you have signed in!")
+
+        }
+
+        else{
+
+            while(maxAttempt!=1){
+
+                if(pin!=2000){
+
+                    maxAttempt--;
+
+                    pin = prompt("Please enter your pin: Attempts remaining " +maxAttempt)
+
+                }
+
+                if(pin==2000){
+
+                    maxAttempt == 1;
+
+                    alert("Congrats you have signed in!")
+
+                    break;
+
+                }
+
+                if(maxAttempt==1){
+
+                    alert("Your account has been blocked")
+
+                }
+
+            }
+
+        }
+        */
+
+        let i = 1;
+
+        let password = 1234;
+
+        let attempt = 1 * prompt("what is your password")
+
+        while (i < 4)
+
+        {
+
+
+            if (attempt == password) {
+
+                prompt("Access Granted")
+
+                break;
+
+            }
+
+            i++
+
+            break;
+
+        }
+
+
+
+        // write a code that prints all numbers from 1 to 10, but leave out 4 and 7
+        // continue
+        /*for(let i=1;i<=10;i++)
+        {
+            if(i==4 || i==7)
+            {
+                continue;
+            }
+            else
+            {
+                console.log(i);
+            }
+        }
+*/
+        // break
+        /*  for(let i=1;i<=10;i++)
+        {
+            if(i==4)
+            {
+                break;
+            }
+            
+                console.log(i);
+         
+        }
+*/
+        // triangle question 
+        /*
+        let string="";
+    for(let i=1;i<=13;i++)
+    {
+        for(let j=0; j<i;j++)
+        {
+            string+="*";
+        }
+        string+="\n"
+    }
+    console.log(string);
+    */
+
+        // // another solution
+        // for(let i = 0; i < 13; i++)
+        //     {
+        //         for(let j = 0; j < i; j++)
+        //         {
+        //             document.write("*")
+        //         }
+        //         document.write("<br>");
+        //     }
+    </script>
+
+</body>
+
+</html>

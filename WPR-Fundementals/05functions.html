@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title></title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+   <script>
+      //1. function declaration method
+      // function square(a,b){
+      // return a * b
+      //}
+      // console.log(square(3,7)) // calling a function
+
+      // 2. function expression
+      //let square = function (a,b =1){
+      //return a * b;
+      //}
+      //console.log(square(3,4))// calling a function
+
+      //3.arrow function
+
+      //let square = (a,b) => a*b;
+      //console.log(square(3,5));// calling a function
+
+      // QUESTION 1 
+      // write a function that calculates the mean of three numbers. 
+      //ashle user inputs their own numbers 
+      /*let num1=1*prompt("Enter the first number");
+      let num2=1*prompt("Enter the second number");
+      let num3=1*prompt("Enter the third number");
+
+      function mean(num1,num2,num3)
+      {
+          return(num1+num2+num3)/3;
+      }
+      let meanOfNums=mean(num1,num2,num3);
+      alert("Mean: "+meanOfNums);
+      */
+      // emile: literal values 
+      /*let num1 = 11
+        let num2 = 3
+        let num3 = 5
+
+function mean(){
+return (num1+num2+num3)/3
+}
+
+alert("The mean is: "+ mean(num1,num2,num3))
+*/
+
+
+
+      //QUESTION 2
+      // ATM  machine allows a 4 or 6 digit PIN. 
+      // PIN code cannot contain anything but exactly 4 or 6 digits. 
+      //create a function that checks if a given code is valid 
+      // e,g 1234 >> valid    12345 >> invalid   123456 >> valid  12h4>> invalid 
+
+      // Tamaryn code 
+      /*function validate(pin)
+              {
+                  let isDigits = /^[0-9]+$/.test(pin);
+                  if(isDigits && (pin.length == 4 || pin.length == 6))
+                  {
+                      return true;
+                  }
+                  else
+                  {
+                      return false;
+                  }
+              }
+              let pin = prompt("Enter your pin:");
+              let isValid = validate(pin);
+
+              if(isValid)
+              {
+                  document.write("The pin, " + pin + " is valid.");
+              }
+              else
+              {
+                  document.write("The pin, " + pin + " is invalid.");
+              }
+      */
+
+      // ashlee code simple version 
+      /*let pin=prompt("Enter your pin");
+
+              function checkValidation(pin)
+              {
+                  if(isNaN(pin))
+                  {
+                      alert("Your pin is not a number");
+                  }
+                  else
+                  {
+                      if(pin.length==4 || pin.length==6)
+                  {
+                      alert("Valid");
+                  }
+                  else
+                  {
+                      alert("Invalid");
+                  }
+                  }
+                  
+              }
+              checkValidation(pin);
+      */
+
+
+
+
+
+
+
+
+      // QUESTION 3 
+      //Mr weather mention write a function that converts Degrees celcius to Fahrenheit 
+      //and vice-versa. so a user shoild have an option of the computation that they want 
+      // please google the formulas 
+      // i also want you to use swtich statement on this question.
+      /*
+              function tempCalculator(choice)
+              {
+                  let temp;
+                  let convertedTemp;
+
+                  switch (choice)
+                  {
+                      case "fahrenheit":
+                          temp = parseFloat(prompt("Enter temperature in Celsius: "));
+                          convertedTemp = (temp * (9/5)) + 32;
+                          document.write(temp + "°C is " + convertedTemp + "°F");
+                          break;
+                      case "celsius":
+                          temp = parseFloat(prompt("Enter temperature in Fahrenheit: "));
+                          convertedTemp = (temp - 32) * (5/9);
+                          document.write(temp + "°F is " + convertedTemp + "°C");
+                          break;
+                      default:
+                          document.write("An invalid choice was provided. Please try again.");
+                  } 
+              }
+
+              let choice = prompt("Are you converting TO Celsius or Fahrenheit?").toLowerCase();
+              tempCalculator(choice);
+      */
+
+
+      // QUESTION 4
+      // Tip Calculator 
+      //write a function that returns  the tip that the waiter will get;
+      //calculated as 20% of the total bill if the bill is less than R200
+      //15% if the total bill is between R200 and R1000
+      // 10% if the bill is greater than R1000
+
+      let bill = 1 * prompt("Enter the amount for the bill in Rands");
+
+      function tip(bill) {
+         let tipAmount = 0;
+         if (bill < 200) {
+            tipAmount = bill * 0.2;
+         } else if (bill >= 200 && bill <= 1000) {
+            tipAmount = bill * 0.15;
+         } else {
+            tipAmount = bill * 0.1;
+         }
+         return tipAmount;
+      }
+      let tips = tip(bill);
+      alert("Tips amount: " + tips);
+   </script>
+</body>
+
+</html>
